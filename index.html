@@ -387,7 +387,7 @@
 
     .project-card {
       display: grid;
-      grid-template-columns: 55px 1.1fr 1fr 1fr 70px 52px;
+      grid-template-columns: 55px minmax(280px, 1.1fr) 1fr 1fr 70px 52px;
       gap: 30px;
       align-items: center;
       padding: 35px 0;
@@ -413,6 +413,7 @@
       line-height: 1;
       font-weight: 800;
       letter-spacing: -0.055em;
+      white-space: nowrap;
     }
 
     .project-subtitle {
@@ -674,8 +675,8 @@
 
     .detail-section-content {
       max-width: 720px;
-      font-size: clamp(17px, 1.8vw, 23px);
-      line-height: 1.7;
+      font-size: clamp(16px, 1.35vw, 18px);
+      line-height: 1.8;
       letter-spacing: -0.025em;
     }
 
@@ -1412,7 +1413,7 @@
 
 
       <p class="insight-intro">
-        Projects가 직접 해본 일을 정리한 기록이라면, Insights는 일상에서 생긴 의문을 출발점으로 사람과 콘텐츠를 관찰하고 생각을 확장해보는 기록입니다.
+        완성된 결과물보다, 일상에서 생긴 작은 의문을 붙잡고 사람과 콘텐츠를 관찰하며 생각을 확장해보는 기록입니다.
       </p>
 
 
