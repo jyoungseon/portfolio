@@ -19,10 +19,6 @@
   />
 
   <style>
-    /* =========================================================
-       RESET
-    ========================================================= */
-
     * {
       margin: 0;
       padding: 0;
@@ -55,10 +51,6 @@
       color: inherit;
     }
 
-    /* =========================================================
-       VARIABLES
-    ========================================================= */
-
     :root {
       --black: #111111;
       --paper: #f3f1eb;
@@ -69,10 +61,6 @@
       --dark-paper: #171717;
       --max-width: 1380px;
     }
-
-    /* =========================================================
-       GLOBAL
-    ========================================================= */
 
     .container {
       width: min(calc(100% - 48px), var(--max-width));
@@ -118,9 +106,7 @@
       color: var(--gray);
     }
 
-    /* =========================================================
-       NAV
-    ========================================================= */
+    /* NAV */
 
     .nav {
       position: fixed;
@@ -181,9 +167,7 @@
       width: 100%;
     }
 
-    /* =========================================================
-       HERO
-    ========================================================= */
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -233,18 +217,19 @@
       -webkit-text-stroke: 2px var(--black);
     }
 
-    .hero-bottom {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: end;
-    }
-
     .hero-description {
-      max-width: 520px;
+      max-width: 720px;
+      margin-top: 45px;
       font-size: clamp(20px, 2.2vw, 30px);
       line-height: 1.45;
       letter-spacing: -0.04em;
+    }
+
+    .hero-bottom {
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+      margin-top: 55px;
     }
 
     .hero-meta {
@@ -264,9 +249,7 @@
       letter-spacing: 0.04em;
     }
 
-    /* =========================================================
-       MARQUEE
-    ========================================================= */
+    /* MARQUEE */
 
     .marquee {
       overflow: hidden;
@@ -289,6 +272,10 @@
       text-transform: uppercase;
     }
 
+    .marquee-dot {
+      margin: 0 8px;
+    }
+
     @keyframes marquee {
       from {
         transform: translateX(0);
@@ -299,9 +286,7 @@
       }
     }
 
-    /* =========================================================
-       ABOUT
-    ========================================================= */
+    /* ABOUT */
 
     .about-grid {
       display: grid;
@@ -327,17 +312,7 @@
       margin-top: 30px;
     }
 
-    .about-highlight {
-      margin-top: 50px;
-      padding-top: 25px;
-      border-top: 1px solid var(--black);
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    /* =========================================================
-       CAPABILITIES
-    ========================================================= */
+    /* CAPABILITIES */
 
     .capability-grid {
       display: grid;
@@ -378,9 +353,7 @@
       max-width: 230px;
     }
 
-    /* =========================================================
-       PROJECTS
-    ========================================================= */
+    /* PROJECTS */
 
     .project-list {
       border-top: 1px solid var(--black);
@@ -388,8 +361,8 @@
 
     .project-card {
       display: grid;
-      grid-template-columns: 80px 1.1fr 1fr 130px;
-      gap: 30px;
+      grid-template-columns: 60px 1.1fr 1fr 70px 60px;
+      gap: 25px;
       align-items: center;
       padding: 35px 0;
       border-bottom: 1px solid var(--line);
@@ -430,6 +403,13 @@
       max-width: 450px;
     }
 
+    .project-date {
+      justify-self: end;
+      color: var(--gray);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
     .project-arrow {
       justify-self: end;
       width: 52px;
@@ -449,100 +429,7 @@
       transform: rotate(45deg);
     }
 
-    /* =========================================================
-       EXPERIENCE
-    ========================================================= */
-
-    .experience-list {
-      border-top: 1px solid var(--black);
-    }
-
-    .experience-item {
-      display: grid;
-      grid-template-columns: 180px 1fr 180px;
-      gap: 50px;
-      padding: 35px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .experience-period {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--gray);
-    }
-
-    .experience-role {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-
-    .experience-org {
-      margin-top: 4px;
-      color: var(--gray);
-      font-size: 13px;
-    }
-
-    .experience-description {
-      margin-top: 15px;
-      max-width: 680px;
-      font-size: 14px;
-      line-height: 1.75;
-    }
-
-    .experience-type {
-      justify-self: end;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gray);
-    }
-
-    /* =========================================================
-       EDUCATION
-    ========================================================= */
-
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .education-card {
-      min-height: 260px;
-      padding: 28px;
-      border: 1px solid var(--black);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: 0.3s ease;
-    }
-
-    .education-card:hover {
-      background: var(--black);
-      color: var(--lime);
-    }
-
-    .education-year {
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .education-school {
-      font-size: 25px;
-      line-height: 1.1;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-
-    .education-major {
-      margin-top: 10px;
-      font-size: 13px;
-    }
-
-    /* =========================================================
-       INSIGHTS
-    ========================================================= */
+    /* INSIGHTS */
 
     .insight-intro {
       display: grid;
@@ -629,9 +516,7 @@
       letter-spacing: 0.06em;
     }
 
-    /* =========================================================
-       CONTACT
-    ========================================================= */
+    /* CONTACT */
 
     .contact {
       background: var(--black);
@@ -684,9 +569,7 @@
       font-size: 12px;
     }
 
-    /* =========================================================
-       FOOTER
-    ========================================================= */
+    /* FOOTER */
 
     footer {
       padding: 20px 0;
@@ -703,9 +586,7 @@
       justify-content: space-between;
     }
 
-    /* =========================================================
-       DETAIL OVERLAY
-    ========================================================= */
+    /* DETAIL OVERLAY */
 
     .detail-overlay {
       position: fixed;
@@ -772,12 +653,12 @@
     .detail-content {
       width: min(calc(100% - 48px), 1100px);
       margin: 0 auto;
-      padding: 100px 0 150px;
+      padding: 85px 0 110px;
     }
 
     .detail-category {
       display: inline-block;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       padding: 7px 12px;
       border: 1px solid var(--black);
       border-radius: 999px;
@@ -796,24 +677,33 @@
     }
 
     .detail-meta {
-      margin-top: 30px;
+      margin-top: 25px;
       color: var(--gray);
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.07em;
     }
 
+    .detail-link {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
     .detail-divider {
-      margin: 80px 0;
+      margin: 55px 0;
       border: none;
       border-top: 1px solid var(--black);
     }
 
     .detail-section {
       display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 60px;
-      padding: 50px 0;
+      grid-template-columns: 180px 1fr;
+      gap: 50px;
+      padding: 35px 0;
       border-bottom: 1px solid var(--line);
     }
 
@@ -826,9 +716,10 @@
 
     .detail-section-content {
       max-width: 700px;
-      font-size: 19px;
-      line-height: 1.75;
+      font-size: 18px;
+      line-height: 1.7;
       letter-spacing: -0.02em;
+      white-space: pre-line;
     }
 
     .detail-section-content strong {
@@ -836,14 +727,14 @@
     }
 
     .detail-takeaway {
-      margin-top: 80px;
-      padding: 50px;
+      margin-top: 55px;
+      padding: 45px;
       background: var(--black);
       color: var(--white);
     }
 
     .detail-takeaway-label {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       color: var(--lime);
       font-size: 12px;
       font-weight: 800;
@@ -859,28 +750,7 @@
       font-weight: 700;
     }
 
-    .detail-footer {
-      margin-top: 100px;
-      padding-top: 30px;
-      border-top: 1px solid var(--black);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .detail-footer button {
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    /* =========================================================
-       REVEAL ANIMATION
-    ========================================================= */
+    /* REVEAL */
 
     .reveal {
       opacity: 0;
@@ -893,12 +763,9 @@
       transform: translateY(0);
     }
 
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
-
       .nav-links {
         display: none;
       }
@@ -917,8 +784,8 @@
       }
 
       .hero-bottom {
-        grid-template-columns: 1fr;
-        margin-top: 80px;
+        justify-content: flex-start;
+        margin-top: 70px;
       }
 
       .hero-meta {
@@ -935,23 +802,12 @@
       }
 
       .project-card {
-        grid-template-columns: 40px 1fr 60px;
+        grid-template-columns: 40px 1fr 50px;
       }
 
-      .project-description {
+      .project-description,
+      .project-date {
         display: none;
-      }
-
-      .experience-item {
-        grid-template-columns: 120px 1fr;
-      }
-
-      .experience-type {
-        display: none;
-      }
-
-      .education-grid {
-        grid-template-columns: 1fr;
       }
 
       .insight-grid {
@@ -968,12 +824,11 @@
 
       .detail-section {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
       }
     }
 
     @media (max-width: 600px) {
-
       .container,
       .nav-inner,
       .footer-inner,
@@ -1002,9 +857,13 @@
         grid-template-columns: 1fr;
       }
 
+      .capability {
+        min-height: 240px;
+      }
+
       .project-card {
         grid-template-columns: 35px 1fr 45px;
-        gap: 12px;
+        gap: 15px;
       }
 
       .project-title {
@@ -1014,27 +873,19 @@
       .project-arrow {
         width: 42px;
         height: 42px;
+        font-size: 18px;
       }
 
-      .experience-item {
-        grid-template-columns: 1fr;
-        gap: 10px;
+      .insight-card {
+        min-height: 300px;
       }
 
       .detail-content {
-        padding-top: 70px;
+        padding-top: 65px;
       }
 
       .detail-title {
-        font-size: clamp(50px, 16vw, 90px);
-      }
-
-      .detail-divider {
-        margin: 55px 0;
-      }
-
-      .detail-section-content {
-        font-size: 17px;
+        font-size: clamp(48px, 15vw, 80px);
       }
 
       .detail-takeaway {
@@ -1042,12 +893,7 @@
       }
 
       .footer-inner {
-        display: block;
-      }
-
-      .footer-inner span:last-child {
-        display: block;
-        margin-top: 5px;
+        gap: 15px;
       }
     }
   </style>
@@ -1055,32 +901,29 @@
 
 <body>
 
-  <!-- =======================================================
-       NAVIGATION
-  ======================================================== -->
+  <!-- NAV -->
 
   <nav class="nav" id="nav">
+
     <div class="nav-inner">
 
       <a href="#top" class="logo">
-        YOUNGSEON JUNG
+        Youngseon Jung
       </a>
 
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#insights">Insights</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
     </div>
+
   </nav>
 
 
-  <!-- =======================================================
-       HERO
-  ======================================================== -->
+  <!-- HERO -->
 
   <main id="top">
 
@@ -1092,29 +935,23 @@
 
           <div class="hero-kicker reveal">
             <strong>Audience-focused research and content</strong>
-
-            사람을 관찰하고,<br>
-            반응을 읽고,<br>
-            콘텐츠의 방향을 찾습니다.
-          </div>
-
-          <div class="eyebrow reveal">
-            Seoul / Korea
           </div>
 
         </div>
 
-        <h1 class="hero-title reveal">
-          <span class="line">Find</span>
-          <span class="line outline">What</span>
-          <span class="line">Matters.</span>
+
+        <h1 class="hero-title hero-name reveal">
+          <span class="line">Youngseon</span>
+          <span class="line">Jung</span>
         </h1>
 
-        <div class="hero-bottom">
 
-          <p class="hero-description reveal">
-            <strong>I observe people, read reactions, and find what matters.</strong>
-          </p>
+        <p class="hero-description reveal">
+          <strong>I observe people, read reactions, and find what matters.</strong>
+        </p>
+
+
+        <div class="hero-bottom">
 
           <div class="hero-meta reveal">
             <span class="tag">Audience</span>
@@ -1130,36 +967,46 @@
     </section>
 
 
-    <!-- =====================================================
-         MARQUEE
-    ====================================================== -->
+    <!-- MARQUEE -->
 
     <div class="marquee">
+
       <div class="marquee-track">
 
         <div class="marquee-item">
-          Observe · Research · Create · Plan ·
+          Audience <span class="marquee-dot">•</span>
+          Research <span class="marquee-dot">•</span>
+          Content <span class="marquee-dot">•</span>
+          Planning
         </div>
 
         <div class="marquee-item">
-          Observe · Research · Create · Plan ·
+          Audience <span class="marquee-dot">•</span>
+          Research <span class="marquee-dot">•</span>
+          Content <span class="marquee-dot">•</span>
+          Planning
         </div>
 
         <div class="marquee-item">
-          Observe · Research · Create · Plan ·
+          Audience <span class="marquee-dot">•</span>
+          Research <span class="marquee-dot">•</span>
+          Content <span class="marquee-dot">•</span>
+          Planning
         </div>
 
         <div class="marquee-item">
-          Observe · Research · Create · Plan ·
+          Audience <span class="marquee-dot">•</span>
+          Research <span class="marquee-dot">•</span>
+          Content <span class="marquee-dot">•</span>
+          Planning
         </div>
 
       </div>
+
     </div>
 
 
-    <!-- =====================================================
-         ABOUT
-    ====================================================== -->
+    <!-- ABOUT -->
 
     <section class="section" id="about">
 
@@ -1170,6 +1017,7 @@
           <span>Who I am</span>
         </div>
 
+
         <div class="about-grid">
 
           <h2 class="about-title reveal">
@@ -1178,33 +1026,20 @@
             찾습니다.
           </h2>
 
+
           <div class="about-copy reveal">
 
             <p>
-              좋은 콘텐츠는 무엇을 말할지 정하는 것에서
-              끝나지 않는다고 생각합니다.
-              <strong>누가 보고, 무엇에 반응하고,
-              왜 움직이는지</strong>를 먼저 살펴야 합니다.
+              좋은 콘텐츠는 <strong>사람을 이해하는 데서 시작합니다.</strong>
+              무엇에 멈추고, 무엇에 반응하는지 살펴보면
+              콘텐츠가 향해야 할 방향이 보인다고 생각합니다.
             </p>
 
             <p>
-              저는 콘텐츠를 만들기 전 사람과 맥락을 관찰하고,
-              필요한 정보를 직접 찾아보고,
-              그 안에서 의미 있는 패턴을 발견하는 데 익숙합니다.
+              뉴스와 콘텐츠를 취재하며 쌓은 리서치 경험으로
+              사람들의 관심과 반응을 관찰하고, 그 안의 패턴을 찾습니다.
+              발견한 인사이트를 콘텐츠와 기획으로 연결합니다.
             </p>
-
-            <p>
-              저널리즘에서 쌓은 리서치와 콘텐츠 경험,
-              해외에서 다양한 사람들과 교류하며 얻은 시각,
-              그리고 직접 행사를 기획하고 콘텐츠를 만든 경험을
-              <strong>마케팅의 언어로 연결하고 있습니다.</strong>
-            </p>
-
-            <div class="about-highlight">
-              I don't start with the content.
-              <br>
-              I start with the people.
-            </div>
 
           </div>
 
@@ -1215,9 +1050,7 @@
     </section>
 
 
-    <!-- =====================================================
-         CAPABILITIES
-    ====================================================== -->
+    <!-- CAPABILITIES -->
 
     <section class="section">
 
@@ -1228,61 +1061,94 @@
           <span>How I work</span>
         </div>
 
+
         <div class="capability-grid">
 
           <div class="capability reveal">
-            <div class="capability-number">01</div>
+
+            <div class="capability-number">
+              01
+            </div>
 
             <div>
-              <div class="capability-title">Audience</div>
+
+              <div class="capability-title">
+                Audience
+              </div>
 
               <p class="capability-desc">
                 사람들의 반응과 관심사를 관찰하고
                 콘텐츠를 보는 관점에서 생각합니다.
               </p>
+
             </div>
+
           </div>
 
 
           <div class="capability reveal">
-            <div class="capability-number">02</div>
+
+            <div class="capability-number">
+              02
+            </div>
 
             <div>
-              <div class="capability-title">Research</div>
+
+              <div class="capability-title">
+                Research
+              </div>
 
               <p class="capability-desc">
                 자료와 현장, 다양한 목소리를 연결해
                 단순한 정보 이상의 맥락을 찾습니다.
               </p>
+
             </div>
+
           </div>
 
 
           <div class="capability reveal">
-            <div class="capability-number">03</div>
+
+            <div class="capability-number">
+              03
+            </div>
 
             <div>
-              <div class="capability-title">Content</div>
+
+              <div class="capability-title">
+                Content
+              </div>
 
               <p class="capability-desc">
                 복잡한 이야기를 사람들이 이해하고
                 관심을 가질 수 있는 형태로 구성합니다.
               </p>
+
             </div>
+
           </div>
 
 
           <div class="capability reveal">
-            <div class="capability-number">04</div>
+
+            <div class="capability-number">
+              04
+            </div>
 
             <div>
-              <div class="capability-title">Planning</div>
+
+              <div class="capability-title">
+                Planning
+              </div>
 
               <p class="capability-desc">
                 목적과 대상에 맞춰 아이디어를 구조화하고
                 실제 결과물로 연결합니다.
               </p>
+
             </div>
+
           </div>
 
         </div>
@@ -1292,9 +1158,7 @@
     </section>
 
 
-    <!-- =====================================================
-         PROJECTS
-    ====================================================== -->
+    <!-- PROJECTS -->
 
     <section class="section" id="projects">
 
@@ -1305,6 +1169,7 @@
           <span>Selected work</span>
         </div>
 
+
         <div class="project-list">
 
 
@@ -1312,27 +1177,34 @@
 
           <article
             class="project-card reveal"
-            data-project="ott"
+            data-project="trend"
           >
 
-            <div class="project-number">01</div>
+            <div class="project-number">
+              01
+            </div>
 
             <div>
+
               <h3 class="project-title">
-                사람들이 왜<br>
-                계속 볼까?
+                두쫀쿠에서<br>
+                피자설기까지
               </h3>
 
               <div class="project-subtitle">
-                OTT Viewer Response Analysis
+                The Korea Herald · Trend Reporting
               </div>
+
             </div>
 
             <p class="project-description">
-              OTT 콘텐츠를 시청하며 장면과 캐릭터에 대한
-              반응을 기록하고 커뮤니티의 반응을 함께 살펴본
-              개인 콘텐츠 분석 프로젝트.
+              두쫀쿠에서 피자설기로 빠르게 이동한 유행의 흐름을 취재하며,
+              무엇이 다음 유행으로 이어지는지 소비자 반응과 콘텐츠를 따라가며 살펴본 기사.
             </p>
+
+            <div class="project-date">
+              2026
+            </div>
 
             <div class="project-arrow">
               ↗
@@ -1345,26 +1217,34 @@
 
           <article
             class="project-card reveal"
-            data-project="cnn"
+            data-project="edinburgh"
           >
 
-            <div class="project-number">02</div>
+            <div class="project-number">
+              02
+            </div>
 
             <div>
+
               <h3 class="project-title">
-                한국의 이야기를<br>
-                세계의 언어로.
+                누구에게<br>
+                어떻게 전달할까?
               </h3>
 
               <div class="project-subtitle">
-                CNN Seoul Bureau
+                Edinburgh Content Project
               </div>
+
             </div>
 
             <p class="project-description">
-              한국의 뉴스와 사회적 맥락을 해외 독자가 이해할 수
-              있도록 조사하고 정리한 글로벌 콘텐츠 경험.
+              장애인 이동권을 주제로 영어 인터뷰와 한·영 자막을 활용해
+              약 2분 50초의 영상 콘텐츠를 제작한 프로젝트.
             </p>
+
+            <div class="project-date">
+              2025
+            </div>
 
             <div class="project-arrow">
               ↗
@@ -1377,27 +1257,34 @@
 
           <article
             class="project-card reveal"
-            data-project="festival"
+            data-project="cnn"
           >
 
-            <div class="project-number">03</div>
+            <div class="project-number">
+              03
+            </div>
 
             <div>
+
               <h3 class="project-title">
-                참여하고 싶은<br>
-                경험을 설계하다.
+                한국의 이야기를<br>
+                세계의 언어로.
               </h3>
 
               <div class="project-subtitle">
-                Ewha Humanities Festival
+                CNN Seoul Bureau
               </div>
+
             </div>
 
             <p class="project-description">
-              약 80명의 학생 대상 수요조사를 바탕으로
-              프로그램을 기획하고 운영하며 만족도를
-              4.1점에서 4.6점으로 높인 경험.
+              한국의 뉴스와 사회적 맥락을 해외 독자가 이해할 수 있도록
+              조사하고 정리한 글로벌 콘텐츠 경험.
             </p>
+
+            <div class="project-date">
+              2025
+            </div>
 
             <div class="project-arrow">
               ↗
@@ -1410,27 +1297,34 @@
 
           <article
             class="project-card reveal"
-            data-project="edinburgh"
+            data-project="festival"
           >
 
-            <div class="project-number">04</div>
+            <div class="project-number">
+              04
+            </div>
 
             <div>
+
               <h3 class="project-title">
-                누구에게<br>
-                어떻게 전달할까?
+                참여하고 싶은<br>
+                경험을 설계하다.
               </h3>
 
               <div class="project-subtitle">
-                Edinburgh Content Project
+                Ewha Humanities Festival
               </div>
+
             </div>
 
             <p class="project-description">
-              장애인 이동권을 주제로 영어 인터뷰와
-              한·영 자막을 활용해 약 2분 50초의
-              영상 콘텐츠를 제작한 프로젝트.
+              약 80명의 학생 대상 수요조사를 바탕으로 프로그램을 기획하고 운영하며
+              만족도를 4.1점에서 4.6점으로 높인 경험.
             </p>
+
+            <div class="project-date">
+              2022
+            </div>
 
             <div class="project-arrow">
               ↗
@@ -1445,251 +1339,14 @@
     </section>
 
 
-    <!-- =====================================================
-         EXPERIENCE
-    ====================================================== -->
-
-    <section class="section" id="experience">
-
-      <div class="container">
-
-        <div class="section-label">
-          <span>04 — Experience</span>
-          <span>Where I learned</span>
-        </div>
-
-        <div class="experience-list">
-
-
-          <div class="experience-item reveal">
-
-            <div class="experience-period">
-              2026 — Present
-            </div>
-
-            <div>
-
-              <div class="experience-role">
-                The Korea Herald
-              </div>
-
-              <div class="experience-org">
-                Intern · Business / Korea News
-              </div>
-
-              <p class="experience-description">
-                국내 기업과 산업 관련 뉴스를 조사하고
-                영문 기사로 작성·편집합니다.
-                기업의 사업과 시장의 흐름을 빠르게 파악하고
-                핵심 정보를 독자가 이해할 수 있는 방식으로
-                구성하는 경험을 쌓고 있습니다.
-              </p>
-
-            </div>
-
-            <div class="experience-type">
-              Journalism
-            </div>
-
-          </div>
-
-
-          <div class="experience-item reveal">
-
-            <div class="experience-period">
-              2025
-            </div>
-
-            <div>
-
-              <div class="experience-role">
-                CNN Seoul Bureau
-              </div>
-
-              <div class="experience-org">
-                Intern · Research / Translation
-              </div>
-
-              <p class="experience-description">
-                한국 뉴스와 사회적 이슈를 모니터링하고
-                해외 독자를 위한 영문 뉴스 요약을 작성했습니다.
-                인터뷰 번역과 자료조사, 외신 취재 지원 등을
-                수행하며 한국의 맥락을 글로벌 독자에게
-                전달하는 과정을 경험했습니다.
-              </p>
-
-            </div>
-
-            <div class="experience-type">
-              Global Content
-            </div>
-
-          </div>
-
-
-          <div class="experience-item reveal">
-
-            <div class="experience-period">
-              2021 — 2022
-            </div>
-
-            <div>
-
-              <div class="experience-role">
-                Ewha Humanities College
-              </div>
-
-              <div class="experience-org">
-                Student Council · Planning Bureau Head
-              </div>
-
-              <p class="experience-description">
-                6명의 기획국을 이끌며 학생 대상 행사를
-                기획하고 운영했습니다.
-                약 80명의 수요조사를 바탕으로 프로그램을
-                구성했으며, 만족도 조사와 운영 결과를 반영해
-                다음 행사의 방향을 조정했습니다.
-              </p>
-
-            </div>
-
-            <div class="experience-type">
-              Planning
-            </div>
-
-          </div>
-
-
-          <div class="experience-item reveal">
-
-            <div class="experience-period">
-              2025
-            </div>
-
-            <div>
-
-              <div class="experience-role">
-                Edinburgh Language Training
-              </div>
-
-              <div class="experience-org">
-                Team Leader · Content Project
-              </div>
-
-              <p class="experience-description">
-                5인 팀의 리더로 장애인 이동권을 주제로
-                영상 콘텐츠를 기획했습니다.
-                영어 인터뷰와 한·영 자막을 활용해
-                약 2분 50초의 영상을 완성했으며
-                경기도미래세대재단 CEO상을 수상했습니다.
-              </p>
-
-            </div>
-
-            <div class="experience-type">
-              Content
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         EDUCATION
-    ====================================================== -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <div class="section-label">
-          <span>05 — Education</span>
-          <span>Where I studied</span>
-        </div>
-
-        <div class="education-grid">
-
-          <div class="education-card reveal">
-
-            <div class="education-year">
-              2021 — 2026
-            </div>
-
-            <div>
-              <div class="education-school">
-                Ewha Womans<br>
-                University
-              </div>
-
-              <div class="education-major">
-                History & Sociology
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class="education-card reveal">
-
-            <div class="education-year">
-              2024
-            </div>
-
-            <div>
-              <div class="education-school">
-                University of<br>
-                British Columbia
-              </div>
-
-              <div class="education-major">
-                Exchange Student · Vancouver, Canada
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class="education-card reveal">
-
-            <div class="education-year">
-              2025
-            </div>
-
-            <div>
-              <div class="education-school">
-                University of<br>
-                Edinburgh
-              </div>
-
-              <div class="education-major">
-                Language Training · Edinburgh, UK
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         INSIGHTS
-    ====================================================== -->
+    <!-- INSIGHTS -->
 
     <section class="section" id="insights">
 
       <div class="container">
 
         <div class="section-label">
-          <span>06 — Insights</span>
+          <span>04 — Insights</span>
           <span>What I'm thinking about</span>
         </div>
 
@@ -1711,15 +1368,6 @@
 
         </div>
 
-
-        <!--
-          =====================================================
-          INSIGHT CARDS
-
-          새로운 Insight를 추가하고 싶으면
-          아래 article을 복사해서 내용만 바꾸면 됩니다.
-          =====================================================
-        -->
 
         <div class="insight-grid" id="insightGrid">
 
@@ -1886,24 +1534,21 @@
     </section>
 
 
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
+    <!-- CONTACT -->
 
     <section class="section contact" id="contact">
 
       <div class="container">
 
         <div class="section-label">
-          <span>07 — Contact</span>
-          <span>Let's talk</span>
+          <span>05 — Contact</span>
+          <span>Let's connect</span>
         </div>
 
-        <h2 class="contact-title reveal">
-          Let's make
-          <span class="lime">something</span>
-          <br>
-          people care about.
+
+        <h2 class="contact-title">
+          Let's make<br>
+          something <span class="lime">matter.</span>
         </h2>
 
 
@@ -1911,8 +1556,8 @@
 
           <div class="contact-info">
 
-            <a href="mailto:your@email.com">
-              your@email.com
+            <a href="mailto:jyoungseon8@gmail.com">
+              jyoungseon8@gmail.com
             </a>
 
             <a
@@ -1924,6 +1569,7 @@
             </a>
 
           </div>
+
 
           <div class="contact-note">
             Content · Brand · Global Marketing
@@ -1938,9 +1584,7 @@
   </main>
 
 
-  <!-- =======================================================
-       FOOTER
-  ======================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -1959,10 +1603,7 @@
   </footer>
 
 
-  <!-- =======================================================
-       DETAIL OVERLAY
-       PROJECT / INSIGHT 공통 상세 화면
-  ======================================================== -->
+  <!-- DETAIL OVERLAY -->
 
   <div
     class="detail-overlay"
@@ -1994,16 +1635,13 @@
     </header>
 
 
-    <article class="detail-content" id="detailContent">
-      <!-- JavaScript가 내용을 삽입합니다. -->
-    </article>
+    <article
+      class="detail-content"
+      id="detailContent"
+    ></article>
 
   </div>
 
-
-  <!-- =======================================================
-       JAVASCRIPT
-  ======================================================== -->
 
   <script>
 
@@ -2013,51 +1651,55 @@
 
     const projects = {
 
-      ott: {
+      trend: {
 
-        category: "Audience · Content",
+        category: "Audience · Research",
 
-        title: "사람들이 왜 계속 볼까?",
+        title: "두쫀쿠에서 피자설기까지",
 
-        meta: "OTT Viewer Response Analysis · Personal Project",
+        meta: "The Korea Herald · Trend Reporting · 2026",
+
+        url: "",
 
         question: `
-          콘텐츠를 많이 보는 것과 콘텐츠에
-          '반응하는 것'은 어떻게 다를까?
+          왜 유행은 이렇게 빠르게 다음 콘텐츠와
+          다음 제품으로 이동할까?
         `,
 
         background: `
-          평소 Netflix, TVING, Wavve 등 OTT 플랫폼에서
-          다양한 콘텐츠를 시청하면서 단순히 재미있었다는
-          감상에 그치지 않고 어떤 장면과 캐릭터가
-          계속 기억에 남는지 기록했습니다.
+          The Korea Herald 인턴으로 근무하며
+          두쫀쿠에서 피자설기로 빠르게 바뀌는
+          디저트 유행의 흐름을 취재했습니다.
         `,
 
         observation: `
-          특히 TVING에서 중국어권 드라마를 시청하면서
-          다음 화가 기다려지는 장면, 특정 캐릭터에 대한
-          반응, 시청자 커뮤니티에서 반복적으로 언급되는
-          포인트를 함께 살펴봤습니다.
+          한 가지 디저트가 오래 유행하기보다
+          SNS와 숏폼을 통해 새로운 제품이 빠르게 확산되고,
+          소비자의 관심도 다음 유행으로 곧바로 이동하는
+          흐름을 살펴봤습니다.
 
           <br><br>
 
-          내가 재미있다고 느낀 이유와 다른 시청자들이
-          반응하는 이유가 같은지 비교하면서
-          콘텐츠의 'hook point'를 찾아봤습니다.
+          동시에 이름과 비주얼만 달라지는 것이 아니라
+          사람들이 공유하고 싶어 하는 장면, 새로운 조합,
+          직접 경험해 보고 싶은 요소가 다음 유행을
+          만들어내는 과정에 주목했습니다.
+        `,
+
+        result: `
+          트렌드 변화를 취재해 The Korea Herald 기사로 발행했습니다.
         `,
 
         insight: `
-          콘텐츠의 매력은 단순히 전체적인 완성도에서만
-          만들어지는 것이 아니라, 시청자가 특정 순간에
-          감정을 느끼고 다음 행동을 하게 만드는
-          구체적인 포인트에서 만들어집니다.
+          유행은 제품 하나의 인기로 끝나지 않습니다.
+          사람들이 무엇을 새롭다고 느끼고, 무엇을 보고
+          이야기하고 싶어 하는지가 다음 관심으로 이어집니다.
         `,
 
         takeaway: `
-          콘텐츠를 기획할 때는
-          '무엇을 보여줄까?'보다
-          '사람들이 어느 순간에 반응할까?'를
-          먼저 생각해야 합니다.
+          트렌드를 따라가는 것보다
+          사람들이 왜 다음 유행으로 움직이는지를
+          읽는 것이 콘텐츠 기획의 출발점이 될 수 있습니다.
         `
       },
 
@@ -2069,6 +1711,8 @@
         title: "한국의 이야기를 세계의 언어로.",
 
         meta: "CNN Seoul Bureau · 2025",
+
+        url: "https://edition.cnn.com/world/asia/south-korea-woman-rape-retrial-intl-hnk-dst",
 
         question: `
           한국에서 당연하게 이해되는 사건을
@@ -2082,32 +1726,33 @@
         `,
 
         observation: `
-          단순히 한국어 문장을 영어로 옮기는 것만으로는
-          해외 독자가 사건의 의미를 이해하기 어렵다는
-          점을 경험했습니다.
+          한국 독자에게는 익숙한 사건도
+          해외 독자에게는 법적·사회적 맥락에 대한
+          추가 설명이 필요하다는 점에 주목했습니다.
 
           <br><br>
 
-          사회적·법적 맥락이 필요한 사안에서는
-          학술자료와 판례, 관련 기사 등을 추가로 조사했고,
-          필요한 경우 관련 기관과 전문가에게 연락해
-          배경을 확인했습니다.
+          사건 자체를 번역하는 데 그치지 않고
+          관련 법률, 판례, 사회적 배경과 주요 쟁점을
+          함께 조사해 국제 독자가 이해할 수 있는
+          정보의 구조를 만드는 데 집중했습니다.
+        `,
+
+        result: `
+          한국의 사회·법률적 맥락을 조사하고
+          영어로 정리하는 리서치와 콘텐츠 지원을 수행했습니다.
         `,
 
         insight: `
           글로벌 콘텐츠에서 중요한 것은
-          언어를 번역하는 것만이 아니라
-          '맥락을 번역하는 것'입니다.
-
-          <br><br>
-
-          같은 사실도 독자가 가진 배경지식에 따라
-          필요한 설명과 전달 방식이 달라집니다.
+          언어만 바꾸는 것이 아니라
+          독자가 이해하는 데 필요한 맥락을 찾아주는 것입니다.
         `,
 
         takeaway: `
-          Global Content starts with understanding
-          who is on the other side of the story.
+          같은 사실도
+          누가 읽는지를 기준으로
+          전달의 구조를 다시 설계해야 합니다.
         `
       },
 
@@ -2126,38 +1771,39 @@
         `,
 
         background: `
-          이화여자대학교 인문과학대학 학생회 기획국장으로
+          이화여자대학교 인문과학대학 학생회 기획부장으로
           약 80명의 학생을 대상으로 수요조사를 진행하고
-          축제 프로그램을 기획했습니다.
+          이를 바탕으로 축제 프로그램을 기획했습니다.
         `,
 
         observation: `
-          단순히 기존 행사를 반복하는 대신
-          학생들이 어떤 프로그램에 관심을 갖는지
-          사전에 조사했습니다.
+          단순히 프로그램을 많이 만드는 것보다
+          학생들이 실제로 어떤 활동에 관심을 보이는지
+          먼저 파악하는 것이 중요했습니다.
 
           <br><br>
 
-          이후 역할을 나누고 운영 과정을 시뮬레이션하며
-          실제 행사에서 발생할 수 있는 문제를
-          미리 점검했습니다.
+          조사 결과를 바탕으로 프로그램을 구성하고,
+          역할을 나누고, 운영 전 시뮬레이션을 진행하며
+          참여 과정에서 생길 수 있는 문제를 미리 점검했습니다.
+        `,
+
+        result: `
+          5개 프로그램을 운영했고,
+          만족도는 목표였던 10% 향상을 넘어
+          4.1점에서 4.6점으로 약 12% 상승했습니다.
         `,
 
         insight: `
-          좋은 기획은 아이디어 하나에서 끝나는 것이 아니라
-          대상의 반응을 확인하고 그것을 실제 운영 방식에
-          반영하는 과정에서 완성됩니다.
-
-          <br><br>
-
-          실제 만족도는 4.1점에서 4.6점으로
-          약 12% 상승했습니다.
+          기획은 아이디어에서 끝나는 것이 아니라
+          실제 참여자의 행동을 예상하고
+          경험 전체를 설계하는 과정입니다.
         `,
 
         takeaway: `
-          기획의 출발점은
-          내가 하고 싶은 것이 아니라
-          사람들이 원하는 것을 이해하는 것입니다.
+          좋은 기획은
+          '무엇을 만들까'보다
+          '사람들이 어떻게 경험할까'에서 시작합니다.
         `
       },
 
@@ -2170,46 +1816,50 @@
 
         meta: "Edinburgh Language Training · 2025",
 
+        url: "https://youtu.be/H2008i294bk?si=x780tI2hoIc9jT_o",
+
         question: `
           사회적 메시지를 사람들이 실제로
           보고 이해하게 만들려면 어떻게 해야 할까?
         `,
 
         background: `
-          영국의 장애인 이동권을 주제로
-          5인 팀의 영상 프로젝트를 진행했습니다.
-
-          약 2분 50초의 영상 안에
-          정책과 현장의 이야기를 함께 담는 것이 목표였습니다.
+          영국 에든버러에서 진행한 언어 연수 과정에서
+          5명의 팀원과 함께 장애인 이동권을 주제로
+          영상 콘텐츠를 기획하고 제작했습니다.
         `,
 
         observation: `
-          팀 안에서는 제도와 정책을 충분히 설명해야 한다는
-          의견과, 복잡한 설명보다 실제 사람의 이야기를
-          보여줘야 한다는 의견이 나뉘었습니다.
+          정책과 제도를 충분히 설명하자는 의견과
+          실제 사례와 인터뷰를 중심으로 구성하자는 의견이
+          나뉘었습니다.
 
           <br><br>
 
-          최종적으로 영상의 실제 시청자를 기준으로
-          내용을 구성하고 영어 인터뷰와 한·영 자막을
-          활용했습니다.
+          최종적으로 결과물을 실제로 볼 사람을 기준으로
+          정보의 양과 전달 방식을 조정했습니다.
+          시설과 관계자를 영어로 인터뷰하고,
+          한국어와 영어 자막을 함께 구성해
+          약 2분 50초의 영상으로 완성했습니다.
+        `,
+
+        result: `
+          영어 인터뷰와 한·영 자막을 활용한
+          약 2분 50초의 영상 콘텐츠를 제작했고,
+          Gyeonggi Future Generations Foundation CEO Award를 받았습니다.
         `,
 
         insight: `
-          콘텐츠의 전달 방식은 콘텐츠를 만드는 사람보다
-          그것을 보는 사람을 기준으로 결정해야 합니다.
-
-          <br><br>
-
-          특히 복잡한 주제일수록 정보량을 늘리는 것보다
-          핵심 메시지를 이해할 수 있는 구조를 만드는 것이
-          중요했습니다.
+          콘텐츠의 완성도는
+          얼마나 많은 정보를 넣었는지가 아니라
+          보는 사람이 실제로 이해할 수 있도록
+          정보를 어떻게 구성했는지에 달려 있습니다.
         `,
 
         takeaway: `
-          The audience is not the final step
-          of content planning.
-          The audience is where planning starts.
+          전달하고 싶은 이야기가 아니라
+          사람들이 이해할 수 있는 방식에서
+          콘텐츠를 설계합니다.
         `
       }
 
@@ -2345,26 +1995,22 @@
 
           <br><br>
 
-          어떤 콘텐츠는 강한 제목으로 관심을 끌었고,
-          어떤 콘텐츠는 첫 장면에서 질문을 던졌으며,
-          또 다른 콘텐츠는 특정 인물이나 상황을
-          먼저 보여주며 궁금증을 만들었습니다.
+          어떤 콘텐츠는 강한 제목이나 비주얼로
+          처음 시선을 붙잡았고,
+          어떤 콘텐츠는 질문이나 갈등을 먼저 제시해
+          다음 내용을 궁금하게 만들었습니다.
         `,
 
         insight: `
-          Hook은 하나의 공식이 아니라
-          '다음 내용을 보고 싶게 만드는 이유'입니다.
-
-          <br><br>
-
-          따라서 콘텐츠 기획 단계에서는
-          전체 내용을 생각하기 전에
-          첫 번째 관심의 순간을 먼저 설계할 필요가 있습니다.
+          콘텐츠의 hook은 하나의 공식으로 정해지는 것이 아니라
+          사람들이 '다음에 무엇이 나올까?'라고 생각하게 만드는
+          장치에 가깝습니다.
         `,
 
         takeaway: `
-          A hook is not a trick.
-          It is the reason people choose to stay.
+          좋은 hook은
+          정보를 모두 보여주는 것이 아니라
+          다음 장면을 보고 싶게 만듭니다.
         `
       },
 
@@ -2378,38 +2024,33 @@
         meta: "Global Content · 2026.10",
 
         question: `
-          같은 사실을 전달하는데도
-          독자에 따라 설명 방식이 달라져야 하는 이유는 무엇일까?
+          같은 사실이라도
+          독자에 따라 전달 방식이 달라져야 할까?
         `,
 
         background: `
-          한국의 사회·정치·법률 이슈를 영어로 정리하면서
-          국내 독자에게는 당연한 정보가
-          해외 독자에게는 추가적인 설명을 필요로 하는
-          경우를 반복적으로 경험했습니다.
+          국내 뉴스와 해외 독자를 위한 콘텐츠를
+          함께 살펴보며 정보의 배치와 설명 방식의
+          차이를 관찰했습니다.
         `,
 
         observation: `
-          독자가 이미 알고 있는 정보가 무엇인지에 따라
-          필요한 콘텐츠의 깊이와 순서가 달라집니다.
-
-          <br><br>
-
-          따라서 같은 사실을 전달하더라도
-          어떤 정보를 먼저 설명하고,
-          어떤 사례를 함께 보여줄지에 따라
-          콘텐츠의 이해도가 크게 달라질 수 있습니다.
+          이미 알고 있는 배경이 많은 독자에게는
+          핵심 사실을 빠르게 전달하는 것이 중요하지만,
+          다른 문화권의 독자에게는 사건을 이해하기 위한
+          기본적인 맥락과 설명이 먼저 필요할 수 있습니다.
         `,
 
         insight: `
-          콘텐츠는 메시지만으로 완성되지 않습니다.
-          메시지를 받아들이는 사람의 배경지식까지
-          고려해야 비로소 전달이 완성됩니다.
+          콘텐츠는 정보를 전달하는 일인 동시에
+          독자가 정보를 이해할 수 있는
+          맥락을 설계하는 일입니다.
         `,
 
         takeaway: `
-          The same story can need
-          a completely different way of being told.
+          전달할 내용을 정하는 것만큼
+          누구의 관점에서 설명할지를 정하는 것도
+          콘텐츠 기획의 일부입니다.
         `
       }
 
@@ -2417,105 +2058,151 @@
 
 
     /* =======================================================
-       DETAIL ELEMENTS
+       ELEMENTS
     ======================================================== */
 
-    const overlay =
-      document.getElementById("detailOverlay");
-
-    const detailContent =
-      document.getElementById("detailContent");
-
-    const closeButton =
-      document.getElementById("closeButton");
-
-    const backButton =
-      document.getElementById("backButton");
+    const nav = document.getElementById("nav");
+    const overlay = document.getElementById("detailOverlay");
+    const detailContent = document.getElementById("detailContent");
+    const backButton = document.getElementById("backButton");
+    const closeButton = document.getElementById("closeButton");
 
 
     /* =======================================================
-       OPEN DETAIL
+       NAV SCROLL
     ======================================================== */
 
-    function openDetail(type, id) {
+    window.addEventListener("scroll", () => {
 
-      const data =
-        type === "project"
-          ? projects[id]
-          : insights[id];
+      if (window.scrollY > 30) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
 
-      if (!data) return;
+    });
+
+
+    /* =======================================================
+       REVEAL
+    ======================================================== */
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.08
+      }
+    );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(el => observer.observe(el));
+
+
+    /* =======================================================
+       DETAIL RENDER
+    ======================================================== */
+
+    function renderDetail(data) {
+
+      const sections = [
+
+        {
+          label: "Question",
+          content: data.question
+        },
+
+        {
+          label: "Background",
+          content: data.background
+        },
+
+        {
+          label: "Observation",
+          content: data.observation
+        },
+
+        ...(data.result
+          ? [
+              {
+                label: "Result",
+                content: data.result
+              }
+            ]
+          : []),
+
+        {
+          label: "Insight",
+          content: data.insight
+        }
+
+      ];
 
 
       detailContent.innerHTML = `
 
-        <div class="detail-category">
+        <span class="detail-category">
           ${data.category}
-        </div>
+        </span>
+
 
         <h1 class="detail-title">
           ${data.title}
         </h1>
 
+
         <div class="detail-meta">
           ${data.meta}
         </div>
 
+
+        ${
+          data.url
+            ? `
+              <a
+                class="detail-link"
+                href="${data.url}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View related work ↗
+              </a>
+            `
+            : ""
+        }
+
+
         <hr class="detail-divider">
 
 
-        <section class="detail-section">
+        ${sections
+          .map(
+            section => `
+              <section class="detail-section">
 
-          <div class="detail-section-label">
-            Question
-          </div>
+                <div class="detail-section-label">
+                  ${section.label}
+                </div>
 
-          <div class="detail-section-content">
-            ${data.question}
-          </div>
+                <div class="detail-section-content">
+                  ${section.content}
+                </div>
 
-        </section>
-
-
-        <section class="detail-section">
-
-          <div class="detail-section-label">
-            Background
-          </div>
-
-          <div class="detail-section-content">
-            ${data.background}
-          </div>
-
-        </section>
-
-
-        <section class="detail-section">
-
-          <div class="detail-section-label">
-            Observation
-          </div>
-
-          <div class="detail-section-content">
-            ${data.observation}
-          </div>
-
-        </section>
-
-
-        <section class="detail-section">
-
-          <div class="detail-section-label">
-            Insight
-          </div>
-
-          <div class="detail-section-content">
-            <strong>
-              ${data.insight}
-            </strong>
-          </div>
-
-        </section>
+              </section>
+            `
+          )
+          .join("")}
 
 
         <div class="detail-takeaway">
@@ -2530,38 +2217,26 @@
 
         </div>
 
-
-        <div class="detail-footer">
-
-          <button onclick="closeDetail()">
-            ← Back
-          </button>
-
-          <span class="muted">
-            ${type === "project" ? "Selected Project" : "Personal Insight"}
-          </span>
-
-        </div>
-
       `;
-
-
-      overlay.classList.add("active");
-
-      overlay.setAttribute(
-        "aria-hidden",
-        "false"
-      );
-
-      document.body.classList.add("modal-open");
 
       overlay.scrollTop = 0;
 
-      history.pushState(
-        null,
-        "",
-        `#${type}/${id}`
-      );
+    }
+
+
+    /* =======================================================
+       OPEN DETAIL
+    ======================================================== */
+
+    function openDetail(data) {
+
+      renderDetail(data);
+
+      overlay.classList.add("active");
+      overlay.setAttribute("aria-hidden", "false");
+
+      document.body.classList.add("modal-open");
+
     }
 
 
@@ -2572,19 +2247,10 @@
     function closeDetail() {
 
       overlay.classList.remove("active");
-
-      overlay.setAttribute(
-        "aria-hidden",
-        "true"
-      );
+      overlay.setAttribute("aria-hidden", "true");
 
       document.body.classList.remove("modal-open");
 
-      history.pushState(
-        null,
-        "",
-        window.location.pathname
-      );
     }
 
 
@@ -2598,13 +2264,12 @@
 
         card.addEventListener("click", () => {
 
-          const id =
-            card.dataset.project;
+          const key = card.dataset.project;
+          const data = projects[key];
 
-          openDetail(
-            "project",
-            id
-          );
+          if (data) {
+            openDetail(data);
+          }
 
         });
 
@@ -2621,13 +2286,12 @@
 
         card.addEventListener("click", () => {
 
-          const id =
-            card.dataset.insight;
+          const key = card.dataset.insight;
+          const data = insights[key];
 
-          openDetail(
-            "insight",
-            id
-          );
+          if (data) {
+            openDetail(data);
+          }
 
         });
 
@@ -2635,23 +2299,31 @@
 
 
     /* =======================================================
-       BUTTONS
+       BACK / CLOSE
     ======================================================== */
-
-    closeButton.addEventListener(
-      "click",
-      closeDetail
-    );
 
     backButton.addEventListener(
       "click",
       closeDetail
     );
 
+    closeButton.addEventListener(
+      "click",
+      closeDetail
+    );
 
-    /* =======================================================
-       ESC KEY
-    ======================================================== */
+
+    overlay.addEventListener(
+      "click",
+      event => {
+
+        if (event.target === overlay) {
+          closeDetail();
+        }
+
+      }
+    );
+
 
     document.addEventListener(
       "keydown",
@@ -2661,158 +2333,11 @@
           event.key === "Escape" &&
           overlay.classList.contains("active")
         ) {
-
           closeDetail();
-
         }
 
       }
     );
-
-
-    /* =======================================================
-       URL HASH SUPPORT
-    ======================================================== */
-
-    function checkHash() {
-
-      const hash =
-        window.location.hash;
-
-      if (!hash) return;
-
-
-      const parts =
-        hash.substring(1).split("/");
-
-      if (parts.length !== 2) return;
-
-
-      const type = parts[0];
-
-      const id = parts[1];
-
-
-      if (
-        type === "project" &&
-        projects[id]
-      ) {
-
-        openDetail(
-          "project",
-          id
-        );
-
-      }
-
-
-      if (
-        type === "insight" &&
-        insights[id]
-      ) {
-
-        openDetail(
-          "insight",
-          id
-        );
-
-      }
-
-    }
-
-
-    window.addEventListener(
-      "hashchange",
-      () => {
-
-        const hash =
-          window.location.hash;
-
-        if (!hash) {
-
-          if (
-            overlay.classList.contains("active")
-          ) {
-            overlay.classList.remove("active");
-            document.body.classList.remove("modal-open");
-          }
-
-        }
-
-      }
-    );
-
-
-    /* =======================================================
-       NAV SCROLL EFFECT
-    ======================================================== */
-
-    const nav =
-      document.getElementById("nav");
-
-    window.addEventListener(
-      "scroll",
-      () => {
-
-        if (window.scrollY > 30) {
-
-          nav.classList.add("scrolled");
-
-        } else {
-
-          nav.classList.remove("scrolled");
-
-        }
-
-      }
-    );
-
-
-    /* =======================================================
-       REVEAL ANIMATION
-    ======================================================== */
-
-    const revealObserver =
-      new IntersectionObserver(
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add(
-                "visible"
-              );
-
-              revealObserver.unobserve(
-                entry.target
-              );
-
-            }
-
-          });
-
-        },
-        {
-          threshold: 0.12
-        }
-      );
-
-
-    document
-      .querySelectorAll(".reveal")
-      .forEach(element => {
-
-        revealObserver.observe(element);
-
-      });
-
-
-    /* =======================================================
-       START
-    ======================================================== */
-
-    checkHash();
 
   </script>
 
